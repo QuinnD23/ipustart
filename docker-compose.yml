@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_PASSWORD: I5uSS1kn08
     ports:
-      - 5432:5432
+      - 5433:5433
     env_file:
       - ".env"
 #    network_mode: "host"
@@ -19,7 +19,7 @@ services:
     image: adminer
     restart: always
     ports:
-      - 8282:8080
+      - 8282:8282
 #    network_mode: "host"
 
   tgbot:
