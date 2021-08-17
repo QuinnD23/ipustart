@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   db:
-    container_name: database
+    container_name: idatabase
     image: postgres
     restart: always
     environment:
@@ -15,7 +15,7 @@ services:
 #    network_mode: "host"
 
   adminer:
-    container_name: adminer
+    container_name: iadminer
     image: adminer
     restart: always
     ports:
@@ -23,7 +23,7 @@ services:
 #    network_mode: "host"
 
   tgbot:
-    container_name: bot
+    container_name: ibot
     build: .
     volumes:
       - .:/src
