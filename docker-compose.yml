@@ -3,27 +3,27 @@ version: '3.1'
 services:
 
   db:
-    container_name: idatabase
+    container_name: database
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: I5uSS1kn08
     ports:
-      - 5433:5433
+      - 5432:5432
     env_file:
       - ".env"
 #    network_mode: "host"
 
   adminer:
-    container_name: iadminer
+    container_name: adminer
     image: adminer
     restart: always
     ports:
-      - 8282:8282
+      - 8080:8080
 #    network_mode: "host"
 
   tgbot:
-    container_name: ibot
+    container_name: bot
     build: .
     volumes:
       - .:/src
