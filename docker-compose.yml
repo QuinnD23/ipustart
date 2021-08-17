@@ -19,7 +19,7 @@ services:
     image: adminer
     restart: always
     ports:
-      - 8081:8081
+      - 8282:8080
 #    network_mode: "host"
 
   tgbot:
